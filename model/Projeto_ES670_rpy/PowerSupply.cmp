@@ -1,0 +1,140 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
+{ IComponent 
+	- _id = GUID 88a7a51b-355c-4870-906d-9393f79cf1fe;
+	- _myState = 8192;
+	- _name = "PowerSupply";
+	- _objectCreation = "3123342273220162211349631";
+	- _umlDependencyID = "2806";
+	- Dependencies = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IDependency 
+			- _id = GUID c7945a5e-9a8c-4e85-a489-f2e58afcf9a8;
+			- _myState = 2048;
+			- _name = "Driver";
+			- _objectCreation = "3123344273220162211347631";
+			- _umlDependencyID = "2248";
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IComponent";
+				- _filename = "Driver.cmp";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Driver";
+				- _id = GUID 213206af-015c-41b0-acff-d119203c9abf;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 0651c432-1945-48ab-8f4b-d3dee339c742;
+			- _myState = 2048;
+			- _name = "Motor";
+			- _objectCreation = "3123346273220162211345631";
+			- _umlDependencyID = "2157";
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IComponent";
+				- _filename = "Motor.cmp";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Motor";
+				- _id = GUID 74ce5ee9-edd0-4a4d-a765-5319cad6aa8e;
+			}
+		}
+		{ IDependency 
+			- _id = GUID f4783463-7b40-4346-8739-73b294810c5d;
+			- _myState = 2048;
+			- _name = "Encoder";
+			- _objectCreation = "3123348273220162211343631";
+			- _umlDependencyID = "2332";
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IComponent";
+				- _filename = "Encoder.cmp";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Encoder";
+				- _id = GUID ebbcc1e1-fba1-4c18-b67f-93b3441ed079;
+			}
+		}
+	}
+	- _lastID = 3;
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 97ebde65-ce9c-4b41-8704-342f08cff016;
+		- _myState = 73728;
+		- _name = "Files";
+		- _objectCreation = "3123350273220162211341631";
+		- _umlDependencyID = "2118";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID eed42626-7c86-49e8-8430-6637d22953fa;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID eed42626-7c86-49e8-8430-6637d22953fa;
+			- _myState = 8192;
+			- _name = "DefaultConfig";
+			- _objectCreation = "3123352273220162211339631";
+			- _umlDependencyID = "2935";
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID 8537b650-1d2e-4381-969f-46b89ef6a04b;
+				- _myState = 8192;
+				- _name = "DefaultConfig";
+				- _objectCreation = "3123354273220162211337631";
+				- _umlDependencyID = "2935";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 12.31.1969::22:0:0;
+			- strongCGTime = 12.31.1969::22:0:0;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 6.28.2016::1:31:40;
+	- strongCGTime = 6.28.2016::1:30:31;
+}
+

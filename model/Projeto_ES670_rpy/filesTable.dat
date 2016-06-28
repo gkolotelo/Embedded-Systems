@@ -1,0 +1,27 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler * 1159120
+
+- filesTable = { IRPYRawContainer 
+	- size = 20;
+	- value = "Projects.rpl" ""
+	"Projeto_ES670.rpy" ""
+	"Projeto_ES670_rpy\\Driver.cmp" "Driver"
+	"Projeto_ES670_rpy\\Encoder.cmp" "Encoder"
+	"Projeto_ES670_rpy\\FRDM_KL25Z.cmp" "FRDM_KL25Z"
+	"Projeto_ES670_rpy\\Final_Project.sbs" "Final_Project"
+	"Projeto_ES670_rpy\\Motor.cmp" "Motor"
+	"Projeto_ES670_rpy\\PowerSupply.cmp" "PowerSupply"
+	"Projeto_ES670_rpy\\Requirements.sbs" "Requirements"
+	"Projeto_ES670_rpy\\Sources.sbs" "Sources"
+	"Projeto_ES670_rpy\\controller.sbs" "Sources::hal::controller"
+	"Projeto_ES670_rpy\\driver.sbs" "Sources::hal::driver"
+	"Projeto_ES670_rpy\\encoder.sbs" "Sources::hal::encoder"
+	"Projeto_ES670_rpy\\hal.sbs" "Sources::hal"
+	"Projeto_ES670_rpy\\hmi.sbs" "Sources::hal::hmi"
+	"Projeto_ES670_rpy\\main.sbs" "Sources::main"
+	"Projeto_ES670_rpy\\mcg.sbs" "Sources::hal::mcg"
+	"Projeto_ES670_rpy\\target_definitions.sbs" "Sources::hal::target_definitions"
+	"Projeto_ES670_rpy\\uart.sbs" "Sources::hal::uart"
+	"Projeto_ES670_rpy\\util.sbs" "Sources::hal::util"
+	
+}
+

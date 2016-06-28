@@ -1,0 +1,105 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
+{ IComponent 
+	- _id = GUID ebbcc1e1-fba1-4c18-b67f-93b3441ed079;
+	- _myState = 8192;
+	- _name = "Encoder";
+	- _objectCreation = "1418459243320162025269614";
+	- _umlDependencyID = "2349";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "Final_Project.sbs";
+			- _subsystem = "Final_Project";
+			- _class = "";
+			- _name = "Hardware";
+			- _id = GUID c8011682-d6fb-4a52-a7a9-73430e572531;
+		}
+	}
+	- _description = { IDescription 
+		- _text = "Direct coupling of motor shaft and encoder";
+	}
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 845eabb4-51ab-4632-9c9c-c810ee3c6be3;
+		- _myState = 73728;
+		- _name = "Files";
+		- _objectCreation = "1418461243320162025267614";
+		- _umlDependencyID = "2135";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 1a5aa454-b96b-4eb5-b373-dfde74b65258;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 1a5aa454-b96b-4eb5-b373-dfde74b65258;
+			- _myState = 8192;
+			- _name = "DefaultConfig";
+			- _objectCreation = "1418463243320162025265614";
+			- _umlDependencyID = "2943";
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID 832e9dc1-ec5d-413e-a1a8-896a1963ece6;
+				- _myState = 8192;
+				- _name = "DefaultConfig";
+				- _objectCreation = "1418465243320162025263614";
+				- _umlDependencyID = "2943";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 6.23.2016::14:38:42;
+	- strongCGTime = 6.15.2016::1:42:19;
+}
+

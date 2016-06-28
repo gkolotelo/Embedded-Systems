@@ -1,0 +1,20 @@
+/**
+ *
+ * File name:        	hmi.c
+ * File description: 	File containing the definition of methods for interaction
+ * 						with a host device via a serial connection.
+ *
+ * Authors:          	Bruno de Souza Ferreira
+ * 						Guilherme Kairalla Kolotelo
+ * 						Guilherme Bersi Pereira
+ *
+ * Creation date:    	25Jun2016
+ * Revision date:    	27Jun2016
+ *
+ */
+
+void hmi_init();
+
+void hmi_receive();
+
+void hmi_transmit(double dVelocity, double dPosition, double dActuator);

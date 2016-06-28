@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;implementation2/sources/hal/target_pins.c&apos; to &apos;target_pins.h&apos;" description="Rename resource &apos;target_pins.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sources/hal/target_pins.c" name="target_pins.h" stamp="1466451371683" updateReferences="true"/>
+</session>

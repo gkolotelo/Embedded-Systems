@@ -1,0 +1,144 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "hal.sbs";
+		- _subsystem = "Sources";
+		- _class = "";
+		- _name = "hal";
+		- _id = GUID bf69319c-0115-404a-8fb0-0dd5c03e27cc;
+	}
+	- _id = GUID 39dff1e9-9ac9-4856-bf68-b0adacf8cd09;
+	- _myState = 8192;
+	- _name = "cooler";
+	- _objectCreation = "5138302302016211214465";
+	- _umlDependencyID = "2115";
+	- _theMainDiagram = { IHandle 
+		- _m2Class = "IDiagram";
+		- _filename = "";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "package_diagram";
+		- _id = GUID 604328de-2202-48b3-9d1a-353bbeb75331;
+	}
+	- _lastID = 1;
+	- weakCGTime = 5.20.2016::18:23:41;
+	- strongCGTime = 5.20.2016::17:55:8;
+	- _defaultComposite = GUID c9f9ead3-9cbd-470b-b476-02371cc9c42e;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IClass 
+			- _id = GUID c9f9ead3-9cbd-470b-b476-02371cc9c42e;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _objectCreation = "5138322302016211214265";
+			- _umlDependencyID = "2282";
+			- weakCGTime = 5.20.2016::18:23:41;
+			- strongCGTime = 5.20.2016::17:55:8;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 50277188-b676-4d13-b436-8741fd4ac4f6;
+			- _myState = 8192;
+			- _name = "cooler";
+			- _objectCreation = "5138342302016211214065";
+			- _umlDependencyID = "2115";
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID 1e6b74e4-9ec8-43ef-85d8-2b7526f2cc18;
+					- _myState = 2048;
+					- _name = "es670_peripheral_board";
+					- _objectCreation = "5138362302016211213865";
+					- _umlDependencyID = "3631";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "es670_peripheral_board.sbs";
+						- _subsystem = "Sources::hal::es670_peripheral_board";
+						- _class = "";
+						- _name = "es670_peripheral_board";
+						- _id = GUID aa110bb3-0172-4266-a0b1-29e5f9f27d13;
+					}
+				}
+			}
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypesC++.sbs";
+					- _subsystem = "PredefinedTypesCpp";
+					- _class = "";
+					- _name = "Subsystem";
+					- _id = GUID 4ea1c1da-7dc6-4a35-bc5a-313393e8408f;
+				}
+			}
+			- _theMainDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "definition_diagram";
+				- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
+			}
+			- _lastID = 2;
+			- weakCGTime = 5.20.2016::18:23:59;
+			- strongCGTime = 5.20.2016::18:9:53;
+			- Operations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 37c3d138-753a-4749-baed-94dd4281a36f;
+					- _myState = 8192;
+					- _name = "init";
+					- _objectCreation = "5138382302016211213665";
+					- _umlDependencyID = "1916";
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

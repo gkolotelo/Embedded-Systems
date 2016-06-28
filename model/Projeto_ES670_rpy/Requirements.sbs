@@ -1,0 +1,118 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
+{ ISubsystem 
+	- _id = GUID 83b232d5-cbf5-48de-bd01-d866eaf248e9;
+	- _myState = 8192;
+	- _name = "Requirements";
+	- _objectCreation = "3241602833201611517063";
+	- _umlDependencyID = "2760";
+	- Annotations = { IRPYRawContainer 
+		- size = 9;
+		- value = 
+		{ IRequirement 
+			- _id = GUID 166aaab7-cf5c-4481-a4d3-665ede382195;
+			- _name = "CONTROL_SPEED";
+			- _objectCreation = "3241622833201611516863";
+			- _umlDependencyID = "2494";
+			- _body = "The motor shall follow, with null error, the reference speed.";
+			- reqID = "REQ01";
+		}
+		{ IRequirement 
+			- _id = GUID 14f38fe2-4ee6-4a1e-950b-e3f37eef0a0a;
+			- _name = "HMI_OUTPUT_SPEED";
+			- _objectCreation = "3241642833201611516663";
+			- _umlDependencyID = "2763";
+			- _body = "The system shall display the angular velocity of the motor's axle.";
+			- reqID = "REQ05";
+		}
+		{ IRequirement 
+			- _id = GUID ac7c8af3-17dd-4d76-b0be-04c3795263c9;
+			- _name = "CONTROL_SETTLING";
+			- _objectCreation = "3241662833201611516463";
+			- _umlDependencyID = "2743";
+			- _body = "The setting time shall be smaller than 10 seconds.";
+			- reqID = "REQ02
+";
+		}
+		{ IRequirement 
+			- _id = GUID f955129c-5a6e-4c50-b3c4-a546def9576e;
+			- _name = "HMI_OUTPUT_POSITION";
+			- _objectCreation = "3241682833201611516263";
+			- _umlDependencyID = "3023";
+			- _body = "The system shall display the angular position of the motor's axle.";
+			- reqID = "REQ04";
+		}
+		{ IRequirement 
+			- _id = GUID 0b53c1e4-b7fc-476c-8788-696ee3c1a74c;
+			- _name = "HMI_INPUT_SPEED";
+			- _objectCreation = "3241702833201611516063";
+			- _umlDependencyID = "2657";
+			- _body = "The system shall operate at the reference angular velocity supplied through the user interface.";
+			- reqID = "REQ07";
+		}
+		{ IRequirement 
+			- _id = GUID eaa58628-4ade-4046-9928-56f257060a65;
+			- _name = "HMI_OUTPUT_ACTUATION";
+			- _objectCreation = "3241722833201611515863";
+			- _umlDependencyID = "3074";
+			- _body = "The system shall display the output value from the controller.";
+			- reqID = "REQ06";
+		}
+		{ IRequirement 
+			- _id = GUID f230e846-fc6a-4648-bf73-e3e8f72330e2;
+			- _name = "HMI_INPUT_PID";
+			- _objectCreation = "3241742833201611515663";
+			- _umlDependencyID = "2518";
+			- _body = "The system shall operate with the Kp, Ki and Kd provided through the user interface.";
+			- reqID = "REQ08";
+		}
+		{ IRequirement 
+			- _id = GUID cdd89261-7335-4387-a028-44076154e2b1;
+			- _name = "Requisito CONTROLE";
+			- _objectCreation = "3241762833201611515463";
+			- _umlDependencyID = "3064";
+			- _body = "O sistema deve ser capaz de realizar a funcionalidade de controlador digital.";
+			- reqID = "REQ7";
+		}
+		{ IRequirement 
+			- _id = GUID a4b54609-cfab-4ccc-9983-191f2968bcf3;
+			- _name = "HARDWARE_VOLTAGE";
+			- _objectCreation = "3241782833201611515263";
+			- _umlDependencyID = "2700";
+			- _body = "The system shall operate with an input voltage of 12V.";
+			- reqID = "REQ03";
+		}
+	}
+	- _theMainDiagram = { IHandle 
+		- _m2Class = "IDiagram";
+		- _filename = "";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "package_diagram";
+		- _id = GUID 604328de-2202-48b3-9d1a-353bbeb75331;
+	}
+	- _lastID = 1;
+	- weakCGTime = 6.28.2016::4:33:1;
+	- strongCGTime = 6.28.2016::1:34:45;
+	- _defaultComposite = GUID 497533ce-60d4-494e-ab2c-d6b23d135320;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 497533ce-60d4-494e-ab2c-d6b23d135320;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _objectCreation = "3241802833201611515063";
+			- _umlDependencyID = "2287";
+			- weakCGTime = 6.28.2016::1:35:15;
+			- strongCGTime = 6.28.2016::1:34:45;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

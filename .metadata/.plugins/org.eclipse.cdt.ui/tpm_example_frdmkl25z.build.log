@@ -1,0 +1,22 @@
+11:57:31 **** Incremental Build of configuration debug for project tpm_example_frdmkl25z ****
+make -k all 
+Building file: C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g -DDEBUG -DCPU_MKL25Z128VLK4 -DFRDM_KL25Z -DFREEDOM -I../../../../../../platform/osa/inc -I../../../../../../platform/utilities/inc -I../../../../../../platform/CMSIS/Include -I../../../../../../platform/devices -I../../../../../../platform/devices/MKL25Z4/include -I../../../../../../platform/devices/MKL25Z4/startup -I../../../../../../platform/hal/inc -I../../../../../../platform/drivers/inc -I../../../../../../platform/system/inc -I../../../../../../platform/drivers/src/tpm -I../../../.. -std=gnu99 -fno-common  -ffreestanding  -fno-builtin  -mapcs -MMD -MP -MF"board/hardware_init.d" -MT"board/hardware_init.o" -c -o "board/hardware_init.o" "C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c"
+C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c: In function 'hardware_init':
+C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c:39:3: warning: implicit declaration of function 'CLOCK_SYS_EnablePortClock' [-Wimplicit-function-declaration]
+   CLOCK_SYS_EnablePortClock(PORTA_IDX);
+   ^
+C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c:47:3: warning: implicit declaration of function 'CLOCK_SYS_SetTpmSrc' [-Wimplicit-function-declaration]
+   CLOCK_SYS_SetTpmSrc(BOARD_TPM_INSTANCE, kClockTpmSrcPllFllSel);
+   ^
+C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c:47:43: error: 'kClockTpmSrcPllFllSel' undeclared (first use in this function)
+   CLOCK_SYS_SetTpmSrc(BOARD_TPM_INSTANCE, kClockTpmSrcPllFllSel);
+                                           ^
+C:/Freescale/KSDK_1.2.0/examples/frdmkl25z/driver_examples/tpm/hardware_init.c:47:43: note: each undeclared identifier is reported only once for each function it appears in
+board/subdir.mk:41: recipe for target 'board/hardware_init.o' failed
+make: *** [board/hardware_init.o] Error 1
+make: Target 'all' not remade because of errors.
+
+11:57:31 Build Finished (took 374ms)
+

@@ -1,0 +1,68 @@
+
+#include "encoder.h"
+
+#include "fsl_tpm_hal.h"
+#include "fsl_tpm_driver.h"
+#include "fsl_clock_manager.h"
+#include "fsl_port_hal.h"
+#include "fsl_gpio_hal.h"
+#include "fsl_interrupt_manager.h"
+#include "fsl_pwm_driver.h"
+
+
+
+extern void TPM2_IRQHandler()
+{
+	//GPIOB_PTOR |= 0b1 << 19;
+	//GPIOB_PTOR |= 0b1 << 18;
+	//GPIOD_PTOR |= 0b10;
+	TPM_DRV_IRQHandler(TPM2_IDX);
+}
+
+void encoder_initEncoder()
+{
+	CLOCK_SYS_EnablePortClock(kSimClockGatePortB);
+	CLOCK_SYS_EnablePortClock(kSimClockGatePortD);
+	//SIM_BASE_PTR->SCGC5 |= SIM_SCGC5_PORTB_MASK;
+	//SIM_SCGC5 |= SIM_SCGC5_PORTB_MASK;
+	PORTB_BASE_PTR->PCR[18] = PORT_PCR_MUX(1);
+	PORTB_BASE_PTR->PCR[19] = PORT_PCR_MUX(1);
+	PORTB_PCR(1) = PORT_PCR_MUX(1);
+	PORT_HAL_SetMuxMode(PORTB, 18, 1);
+	PORT_HAL_SetMuxMode(PORTB, 19, 1);
+	PORT_HAL_SetMuxMode(PORTD, 1, 1);
+
+	GPIOB_PDDR = 0b1 << 19;
+	GPIOB_PDDR = 0b1 << 18;
+	GPIOD_PDDR = 0b10;
+
+	CLOCK_SYS_SetTpmSrc(TPM2_IDX, kTpmClockSourceExternalClk);
+
+	tpm_general_config_t config=
+	{
+			.isDBGMode = true
+	};
+
+	TPM_DRV_Init(TPM2_IDX, &config);
+
+	TPM_DRV_SetTimeOverflowIntCmd(TPM2_IDX, true);
+
+	//NVIC_SetPriority(TPM2_IRQn, 0x50);
+
+	TPM_DRV_SetClock(TPM2_IDX, kTpmClockSourceModuleClk, kTpmDividedBy128);
+
+
+	tpm_pwm_param_t pwm =
+	{
+			.mode = kTpmOutputNone,
+			.edgeMode = kTpmHighTrue,
+			.uFrequencyHZ = 2,
+			.uDutyCyclePercent = 50,
+
+	};
+	TPM_DRV_PwmStart(TPM2_IDX, &pwm, 1U);
+
+
+}
+
+

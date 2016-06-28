@@ -1,0 +1,63 @@
+
+#include "encoder.h"
+
+#include "fsl_tpm_hal.h"
+#include "fsl_tpm_driver.h"
+#include "fsl_clock_manager.h"
+#include "fsl_port_hal.h"
+#include "fsl_gpio_hal.h"
+#include "fsl_interrupt_manager.h"
+#include "fsl_pwm_driver.h"
+
+
+
+extern void TPM2_IRQHandler()
+{
+	TPM_DRV_IRQHandler(TPM2_IDX);
+	GPIO_HAL_TogglePinOutput(GPIOB, 19);
+	GPIO_HAL_TogglePinOutput(GPIOB, 18);
+	GPIO_HAL_TogglePinOutput(GPIOD, 1);
+}
+
+void encoder_initEncoder()
+{
+	CLOCK_SYS_EnablePortClock(1);
+	CLOCK_SYS_EnablePortClock(3);
+	PORT_HAL_SetMuxMode(PORTB, 18, 1);
+	PORT_HAL_SetMuxMode(PORTB, 19, 1);
+	PORT_HAL_SetMuxMode(PORTD, 1, 1);
+	GPIO_HAL_SetPinDir(GPIOB, 18, kGpioDigitalOutput);
+	GPIO_HAL_SetPinDir(GPIOB, 19, kGpioDigitalOutput);
+	GPIO_HAL_SetPinDir(GPIOD, 1,  kGpioDigitalOutput);
+
+	//CLOCK_SYS_SetTpmSrc(TPM2_IDX, kClockTpmSrcOsc0erClk);
+
+	tpm_general_config_t config=
+	{
+			.isDBGMode = true
+	};
+
+	TPM_DRV_Init(TPM2_IDX, &config);
+
+	TPM_DRV_SetTimeOverflowIntCmd(TPM2_IDX, true);
+
+	//NVIC_SetPriority(TPM2_IRQn, 0x50);
+
+	TPM_DRV_SetClock(TPM2_IDX, kTpmClockSourceExternalClk, kTpmDividedBy1);
+
+	TPM_HAL_SetMod(TPM2_IDX, 3);
+
+	tpm_pwm_param_t pwm =
+	{
+			.mode = kTpmOutputNone,
+			.edgeMode = kTpmHighTrue,
+			.uFrequencyHZ = 1,
+			.uDutyCyclePercent = 50,
+
+	};
+	//TPM_DRV_PwmStart(TPM2_IDX, &pwm, 1U);
+
+
+}
+
+

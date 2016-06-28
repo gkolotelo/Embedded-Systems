@@ -1,0 +1,67 @@
+02:10:55 **** Build of configuration Debug for project implementation ****
+make all 
+'Building file: ../sources/hal/util/tc_hal.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/util/tc_hal.d" -MT"sources/hal/util/tc_hal.o" -c -o "sources/hal/util/tc_hal.o" "../sources/hal/util/tc_hal.c"
+'Finished building: ../sources/hal/util/tc_hal.c'
+' '
+'Building file: ../sources/hal/uart/fsl_debug_console.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/uart/fsl_debug_console.d" -MT"sources/hal/uart/fsl_debug_console.o" -c -o "sources/hal/uart/fsl_debug_console.o" "../sources/hal/uart/fsl_debug_console.c"
+'Finished building: ../sources/hal/uart/fsl_debug_console.c'
+' '
+'Building file: ../sources/hal/uart/print_scan.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/uart/print_scan.d" -MT"sources/hal/uart/print_scan.o" -c -o "sources/hal/uart/print_scan.o" "../sources/hal/uart/print_scan.c"
+'Finished building: ../sources/hal/uart/print_scan.c'
+' '
+'Building file: ../sources/hal/mcg/mcg.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/mcg/mcg.d" -MT"sources/hal/mcg/mcg.o" -c -o "sources/hal/mcg/mcg.o" "../sources/hal/mcg/mcg.c"
+'Finished building: ../sources/hal/mcg/mcg.c'
+' '
+'Building file: ../sources/hal/hmi/hmi.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/hmi/hmi.d" -MT"sources/hal/hmi/hmi.o" -c -o "sources/hal/hmi/hmi.o" "../sources/hal/hmi/hmi.c"
+'Finished building: ../sources/hal/hmi/hmi.c'
+' '
+'Building file: ../sources/hal/encoder/encoder.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/encoder/encoder.d" -MT"sources/hal/encoder/encoder.o" -c -o "sources/hal/encoder/encoder.o" "../sources/hal/encoder/encoder.c"
+'Finished building: ../sources/hal/encoder/encoder.c'
+' '
+'Building file: ../sources/hal/driver/driver.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/driver/driver.d" -MT"sources/hal/driver/driver.o" -c -o "sources/hal/driver/driver.o" "../sources/hal/driver/driver.c"
+'Finished building: ../sources/hal/driver/driver.c'
+' '
+'Building file: ../sources/hal/controller/controller.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/hal/controller/controller.d" -MT"sources/hal/controller/controller.o" -c -o "sources/hal/controller/controller.o" "../sources/hal/controller/controller.c"
+'Finished building: ../sources/hal/controller/controller.c'
+' '
+'Building file: ../sources/main.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"sources/main.d" -MT"sources/main.o" -c -o "sources/main.o" "../sources/main.c"
+'Finished building: ../sources/main.c'
+' '
+'Building file: ../Project_Settings/Startup_Code/startup.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"Project_Settings/Startup_Code/startup.d" -MT"Project_Settings/Startup_Code/startup.o" -c -o "Project_Settings/Startup_Code/startup.o" "../Project_Settings/Startup_Code/startup.c"
+'Finished building: ../Project_Settings/Startup_Code/startup.c'
+' '
+'Building file: ../Project_Settings/Startup_Code/startup_MKL25Z4.S'
+'Invoking: Cross ARM GNU Assembler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -x assembler-with-cpp -MMD -MP -MF"Project_Settings/Startup_Code/startup_MKL25Z4.d" -MT"Project_Settings/Startup_Code/startup_MKL25Z4.o" -c -o "Project_Settings/Startup_Code/startup_MKL25Z4.o" "../Project_Settings/Startup_Code/startup_MKL25Z4.S"
+'Finished building: ../Project_Settings/Startup_Code/startup_MKL25Z4.S'
+' '
+'Building file: ../Project_Settings/Startup_Code/system_MKL25Z4.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -D"CPU_MKL25Z128VLK4" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\inc" -I"../Sources" -I"C:\Freescale\KSDK_1.2.0\platform\utilities\src" -I"../Project_Settings/Startup_Code" -I"../SDK/platform/CMSIS/Include" -I"../SDK/platform/devices" -I"../SDK/platform/devices/MKL25Z4/include" -I"C:\Freescale\KSDK_1.2.0\platform\hal\inc" -I"C:\Freescale\KSDK_1.2.0\platform\system\inc" -I"C:\Freescale\KSDK_1.2.0\platform\osa\inc" -I"C:\Freescale\KSDK_1.2.0\platform\drivers\inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/inc" -I"C:\Freescale\KSDK_1.2.0/platform/utilities/src" -std=c99 -MMD -MP -MF"Project_Settings/Startup_Code/system_MKL25Z4.d" -MT"Project_Settings/Startup_Code/system_MKL25Z4.o" -c -o "Project_Settings/Startup_Code/system_MKL25Z4.o" "../Project_Settings/Startup_Code/system_MKL25Z4.c"
+'Finished building: ../Project_Settings/Startup_Code/system_MKL25Z4.c'
+' '
+'Building target: implementation.elf'
+'Invoking: Cross ARM C++ Linker'
+arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "MKL25Z128xxx4_flash.ld" -Xlinker --gc-sections -L"E:/ES670A/Final Project/implementation/Project_Settings/Linker_Files" -Wl,-Map,"implementation.map" -specs=nosys.specs -specs=nano.specs -o "implementation.elf"  ./sources/hal/util/tc_hal.o  ./sources/hal/uart/fsl_debug_console.o ./sources/hal/uart/print_scan.o  ./sources/hal/mcg/mcg.o  ./sources/hal/hmi/hmi.o  ./sources/hal/encoder/encoder.o  ./sources/hal/driver/driver.o  ./sources/hal/controller/controller.o  ./sources/main.o  ./Project_Settings/Startup_Code/startup.o ./Project_Settings/Startup_Code/startup_MKL25Z4.o ./Project_Settings/Startup_Code/system_MKL25Z4.o  C:/Freescale/KSDK_1.2.0/lib/ksdk_platform_lib/kds/KL25Z4/debug/libksdk_platform.a 
+'Finished building target: implementation.elf'
+' '

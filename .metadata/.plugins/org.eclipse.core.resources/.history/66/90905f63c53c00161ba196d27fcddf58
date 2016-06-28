@@ -1,0 +1,94 @@
+/* ***************************************************************** */
+/* File name:        es670_peripheral_board.h                        */
+/* File description: Header file containing the peripherals mapping  */
+/*                     of the peripheral board for the ES670 hardware*/
+/* Author name:      dloubach                                        */
+/* Modified by:      Guilherme Kairalla Kolotelo                     */
+/*                   Kaique Arce de Almeida Camargo                  */
+/* Creation date:    16Oct2015                                       */
+/* Revision date:    20May2016                                       */
+/* ***************************************************************** */
+
+#ifndef SOURCES_TARGET_PINS_H_
+#define SOURCES_TARGET_PINS_H_
+
+/* system includes */
+#include <MKL25Z4.h>
+
+/*                    General uC Definitions             */
+
+/* Clock gate control */
+#define  CGC_CLOCK_DISABLED         0x00U
+#define  CGC_CLOCK_ENABLED          0x01U
+
+/* GPIO input / output */
+#define GPIO_INPUT                  0x00U
+#define GPIO_OUTPUT                 0x01U
+
+
+/*                 END OF General uC Definitions         */
+
+
+
+
+
+/*                     Driver Definitions                */
+/* TPM module */
+#define DRIVER_TPM_INSTANCE			TPM0_IDX
+#define DRIVER_TPM_BASE				TPM0
+/* ChA:		PTC1(J10 12) */
+#define DRIVER_CHA_PORT_INSTANCE	PORTC_IDX
+#define DRIVER_CHA_PORT_BASE		PORTC
+#define DRIVER_CHA_PORT_ALT			4U
+#define DRIVER_CHA_PIN_NUMBER		1U
+#define DRIVER_CHA_INSTANCE 		0U
+/* ChB:		PTC2(J10 10) */
+#define DRIVER_CHB_PORT_INSTANCE	PORTC_IDX
+#define DRIVER_CHB_PORT_BASE		PORTC
+#define DRIVER_CHB_PORT_ALT			4U
+#define DRIVER_CHB_PIN_NUMBER		2U
+#define DRIVER_CHB_INSTANCE 		1U
+/* Enable:	PTE30(J10 11) */
+#define DRIVER_EN_PORT_INSTANCE		PORTE_IDX
+#define DRIVER_EN_PORT_BASE			PORTE
+#define DRIVER_EN_GPIO_BASE			GPIOE
+#define DRIVER_EN_PORT_ALT			1U
+#define DRIVER_EN_PIN_DIR			GPIO_OUTPUT
+#define DRIVER_EN_PIN_NUMBER		30U
+/*                  END OF Driver Definitions            */
+
+
+/*                     Encoder Definitions               */
+/* ChA:	PTC12(J2 01) @ FTM_CLKIN0, TPM1 for encoder pin A */
+#define ENCODER_CHA_PORT_INSTANCE		PORTC_IDX
+#define ENCODER_CHA_PORT_BASE			PORTC
+#define ENCODER_CHA_PORT_ALT			4U
+#define ENCODER_CHA_PIN_NUMBER			12U			// Interrupt enabled on TPM2
+#define ENCODER_CHA_TPM_INSTANCE		TPM2_IDX
+#define ENCODER_CHA_TPM_BASE			TPM2
+#define ENCODER_CHA_FTM_CLKIN			0U
+/* ChB:  PTC13(J2 03) @ FTM_CLKIN1, TPM2 for encoder pin B */
+#define ENCODER_CHB_PORT_INSTANCE		PORTC_IDX
+#define ENCODER_CHB_PORT_BASE			PORTC
+#define ENCODER_CHB_PORT_ALT			4U
+#define ENCODER_CHB_PIN_NUMBER			13U
+#define ENCODER_CHB_TPM_INSTANCE		TPM1_IDX
+#define ENCODER_CHB_TPM_BASE			TPM1
+#define ENCODER_CHB_FTM_CLKIN			1U
+/* ChO:  PTD0(J2 06) interrupt pin */
+#define ENCODER_CHO_PORT_INSTANCE		PORTD_IDX
+#define ENCODER_CHO_PORT_BASE			PORTD
+#define ENCODER_CHO_PIN_NUMBER			0U
+/* General definitions */
+#define ENCODER_INTERRUPT_TPM_INSTANCE	ENCODER_CHA_TPM_INSTANCE	// Set interrupt on Ch. A
+/* Interrupt definitions */
+#define ENCODER_CHA_IRQ_HANDLER			TPM2_IRQHandler
+#define ENCODER_INTERRUPT_IRQn			TPM2_IRQn
+#define ENCODER_CHO_IRQ_HANDLER			PORTD_IRQHandler
+#define ENCODER_CHO_IRQn				PORTD_IRQn
+
+/*                  END OF Encoder Definitions           */
+
+
+
+#endif /* SOURCES_TARGET_PINS_H_*/

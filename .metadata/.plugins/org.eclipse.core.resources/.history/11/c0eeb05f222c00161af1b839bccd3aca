@@ -1,0 +1,61 @@
+
+/* system includes */
+#include "fsl_debug_console.h"
+#include "fsl_device_registers.h"
+
+#include "hal/buzzer/buzzer.h"
+#include "hal/mcg/mcg.h"
+#include "hal/util/util.h"
+#include "hal/ledswi/ledswi.h"
+#include "hal/display_7segments/display_7segments.h"
+#include "hal/uart/debugUart.h"
+#include "hal/uart/interpreter.h"
+#include "hal/lcd/lcd.h"
+#include "hal/pwm/pwm.h"
+#include "hal/util/tc_hal.h"
+#include "hal/cooler/cooler.h"
+#include "hal/tach/tach.h"
+
+/* defines */
+#define CYCLIC_EXECUTIVE_PERIOD         100 * 10000 /* 1000000 micro seconds */
+
+/* globals */
+volatile unsigned int uiFlagNextPeriod = 0;         /* cyclic executive flag */
+
+void main_cyclicExecuteIsr(void)
+{
+    /* set the cyclic executive flag */
+    uiFlagNextPeriod = 1;
+}
+
+int boardInit()
+{
+    mcg_clockInit();
+}
+
+int peripheralInit()
+{
+
+
+	tc_installLptmr0(CYCLIC_EXECUTIVE_PERIOD, main_cyclicExecuteIsr);
+}
+
+int main(void)
+{
+    boardInit();
+    peripheralInit();
+
+    for (;;) {
+
+
+    	// Wait for next period
+    	while(!uiFlagNextPeriod);
+    	uiFlagNextPeriod = 0;
+
+    }
+
+    return 0;
+}
+////////////////////////////////////////////////////////////////////////////////
+// EOF
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,59 @@
+/**
+ *
+ * File name:        	hmi.c
+ * File description: 	File containing the definition of methods for interaction
+ * 						with a host device via a serial connection.
+ *
+ * Authors:          	Bruno de Souza Ferreira
+ * 						Guilherme Kairalla Kolotelo
+ * 						Guilherme Bersi Pereira
+ *
+ * Creation date:    	25Jun2016
+ * Revision date:    	27Jun2016
+ *
+ */
+
+#ifndef SOURCES_HMI_H_
+#define SOURCES_HMI_H_
+
+/**
+ * Method name:			hmi_init
+ * Method description:	Initializes UART0 for debug mode for serial over USB, provided by OpenSDA.
+ * Input params:      	n/a
+ * Output params:     	n/a
+ */
+void hmi_init()
+{
+    /* LPSCI0 */
+	CLOCK_SYS_EnablePortClock(HMI_UART_PORT_INSTANCE);
+    /* UART0_RX */
+    PORT_HAL_SetMuxMode(HMI_UART_PORT_BASE, HMI_UART_PIN_RX, kPortMuxAlt2);
+    /* UART0_TX */
+    PORT_HAL_SetMuxMode(HMI_UART_PORT_BASE, HMI_UART_PIN_TX, kPortMuxAlt2);
+
+    /* Select different clock source for LPSCI */
+    CLOCK_SYS_SetLpsciSrc(HMI_UART_INSTANCE, kClockLpsciSrcPllFllSel);
+
+    /* Initialize the debug console */
+    DbgConsole_Init(HMI_UART_INSTANCE, HMI_UART_BAUD, kDebugConsoleLPSCI);
+}
+
+/**
+ * Method name:			hmi_receive
+ * Method description:	Receives and interprets data sent from the host device.
+ * Input params:      	n/a
+ * Output params:     	n/a
+ */
+void hmi_receive();
+
+/**
+ * Method name:			hmi_transmit
+ * Method description:	Transmits required data to the host device. Uses space as separator
+ * Input params:      	dVelocity: Velocity reading from encoder
+ * 						dPosition: Position reading from encoder
+ * 						dActuator: Actuator value from controller
+ * Output params:     	n/a
+ */
+void hmi_transmit(double dVelocity, double dPosition, double dActuator)
+
+#endif /* SOURCES_HMI_H_ */

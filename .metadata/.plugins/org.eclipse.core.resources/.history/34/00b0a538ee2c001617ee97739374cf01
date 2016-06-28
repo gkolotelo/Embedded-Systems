@@ -1,0 +1,50 @@
+
+#include "encoder.h"
+
+#include "fsl_tpm_hal.h"
+#include "fsl_tpm_driver.h"
+#include "fsl_clock_manager.h"
+#include "fsl_port_hal.h"
+#include "fsl_gpio_hal.h"
+#include "fsl_interrupt_manager.h"
+#include "fsl_pwm_driver.h"
+
+void test_handler()
+{
+	TPM_DRV_IRQHandler(TPM2_IDX);
+	PTB_BASE_PTR->PTOR = 0b11 << 19;
+}
+
+void encoder_initEncoder()
+{
+	SIM_BASE_PTR->SCGC5 |= SIM_SCGC5_PORTB_MASK;
+	PORTB_BASE_PTR->PCR[18] = PORTB_BASE_PTR->PCR[19] = PORT_PCR_MUX(1);
+	PTB_BASE_PTR->PDDR = 0b11 << 19;
+
+	CLOCK_SYS_SetTpmSrc(TPM2_IDX, kTpmClockSourceExternalClk);
+
+	tpm_general_config_t config=
+	{
+			.isDBGMode = true
+	};
+
+	TPM_DRV_Init(TPM2_IDX, &config);
+
+	TPM_DRV_SetClock(TPM2_IDX, kTpmClockSourceModuleClk, kTpmDividedBy128);
+
+	tpm_pwm_param_t pwm =
+	{
+			.mode = kTpmEdgeAlignedPWM,
+			.edgeMode = kTpmHighTrue,
+			.uFrequencyHZ = 1,
+			.uDutyCyclePercent = 50,
+
+	};
+	TPM_DRV_PwmStart(TPM2_IDX, &pwm, 1U);
+
+	TPM_DRV_SetTimeOverflowIntCmd(TPM2_IDX, true);
+
+	INT_SYS_InstallHandler(TPM2_IRQn, test_handler);
+}
+
+
