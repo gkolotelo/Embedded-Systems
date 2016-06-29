@@ -1,15 +1,16 @@
 I-Logix-RPY-Archive version 8.5.2 Modeler * 1159120
 
 - filesTable = { IRPYRawContainer 
-	- size = 20;
+	- size = 21;
 	- value = "Projects.rpl" ""
 	"Projeto_ES670.rpy" ""
 	"Projeto_ES670_rpy\\Driver.cmp" "Driver"
 	"Projeto_ES670_rpy\\Encoder.cmp" "Encoder"
 	"Projeto_ES670_rpy\\FRDM_KL25Z.cmp" "FRDM_KL25Z"
 	"Projeto_ES670_rpy\\Final_Project.sbs" "Final_Project"
+	"Projeto_ES670_rpy\\Host_Interface.cmp" "Host_Interface"
 	"Projeto_ES670_rpy\\Motor.cmp" "Motor"
-	"Projeto_ES670_rpy\\PowerSupply.cmp" "PowerSupply"
+	"Projeto_ES670_rpy\\PowerSupply_12V.cmp" "PowerSupply_12V"
 	"Projeto_ES670_rpy\\Requirements.sbs" "Requirements"
 	"Projeto_ES670_rpy\\Sources.sbs" "Sources"
 	"Projeto_ES670_rpy\\controller.sbs" "Sources::hal::controller"

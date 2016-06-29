@@ -1,0 +1,102 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
+{ IComponent 
+	- _id = GUID 0e52124a-e789-4058-8ffe-313e31fb1a1a;
+	- _myState = 8192;
+	- _name = "Host_Interface";
+	- _objectCreation = "32284628552016141999863";
+	- _umlDependencyID = "2985";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "Final_Project.sbs";
+			- _subsystem = "Final_Project";
+			- _class = "";
+			- _name = "Software";
+			- _id = GUID 4fa28ec1-ff96-4344-8216-905756dbcb0a;
+		}
+	}
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 252a4cc3-c86c-444f-85fc-67418eae3653;
+		- _myState = 73728;
+		- _name = "Files";
+		- _objectCreation = "32284828552016141999663";
+		- _umlDependencyID = "2062";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID fa1abc9d-d7d1-43e6-8166-d5cb616bb377;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID fa1abc9d-d7d1-43e6-8166-d5cb616bb377;
+			- _myState = 8192;
+			- _name = "DefaultConfig";
+			- _objectCreation = "32285028552016141999463";
+			- _umlDependencyID = "2861";
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID bef05ee8-46bb-4f67-b4c4-d62941344005;
+				- _myState = 8192;
+				- _name = "DefaultConfig";
+				- _objectCreation = "32285228552016141999263";
+				- _umlDependencyID = "2861";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 12.31.1969::19:0:0;
+			- strongCGTime = 12.31.1969::19:0:0;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 6.28.2016::18:53:33;
+	- strongCGTime = 6.28.2016::18:53:33;
+}
+
