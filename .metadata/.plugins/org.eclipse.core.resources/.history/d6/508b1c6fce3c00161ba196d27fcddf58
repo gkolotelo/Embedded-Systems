@@ -1,7 +1,0 @@
-
-
-void hmi_init();
-
-void hmi_receive();
-
-void hmi_transmit(double dVelocity, double dPosition, double dActuator);

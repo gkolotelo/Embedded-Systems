@@ -1,6 +1,0 @@
-void driver_initDriver(uint8_t tChannelAPortInstance,
-					   uint8_t tChannelAPortPinNumber,
-					   uint8_t uiChannelA,
-					   uint8_t tChannelBPortInstance,
-					   uint8_t tChannelBPortPinNumber,
-					   uint8_t uiChannelB);

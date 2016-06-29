@@ -1,6 +1,0 @@
-14:01:47 **** Incremental Build of configuration Debug for project implementation ****
-make all 
-makefile:62: *** multiple target patterns.  Stop.
-
-14:01:47 Build Finished (took 67ms)
-

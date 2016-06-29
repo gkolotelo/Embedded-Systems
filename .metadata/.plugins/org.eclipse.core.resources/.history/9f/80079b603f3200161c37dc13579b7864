@@ -1,3 +1,0 @@
-
-
-void encoder_initEncoder(int uiEncoderPortInstance, int uiEncoderInputA, int uiEncoderInputB);

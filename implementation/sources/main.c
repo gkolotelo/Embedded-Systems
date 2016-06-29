@@ -1,14 +1,14 @@
 /**
  *
- * File name:        	main.c
- * File description: 	File containing the main entry point for the system.
+ * File name:           main.c
+ * File description:    File containing the main entry point for the system.
  *
- * Authors:          	Bruno de Souza Ferreira
- * 						Guilherme Kairalla Kolotelo
- * 						Guilherme Bersi Pereira
+ * Authors:             Bruno de Souza Ferreira
+ *                      Guilherme Kairalla Kolotelo
+ *                      Guilherme Bersi Pereira
  *
- * Creation date:    	20Jun2016
- * Revision date:    	27Jun2016
+ * Creation date:       20Jun2016
+ * Revision date:       27Jun2016
  *
  */
 
@@ -55,66 +55,66 @@ int boardInit()
 
 int peripheralInit()
 {
-	/* Configure Red LED and pin for status and timing analysis */
-	CLOCK_SYS_EnablePortClock(PORTB_IDX);
-	PORT_HAL_SetMuxMode(PORTB, 18, 1);
-	PORT_HAL_SetMuxMode(PORTB, 8, 1);
-	GPIO_HAL_SetPinDir(GPIOB, 18, kGpioDigitalOutput);
-	GPIO_HAL_SetPinDir(GPIOB, 8, kGpioDigitalOutput);
+    /* Configure Red LED and pin for status and timing analysis */
+    CLOCK_SYS_EnablePortClock(PORTB_IDX);
+    PORT_HAL_SetMuxMode(PORTB, 18, 1);
+    PORT_HAL_SetMuxMode(PORTB, 8, 1);
+    GPIO_HAL_SetPinDir(GPIOB, 18, kGpioDigitalOutput);
+    GPIO_HAL_SetPinDir(GPIOB, 8, kGpioDigitalOutput);
 
-	/* Comm init */
-	hmi_initHmi();
+    /* Comm init */
+    hmi_initHmi();
 
-	/* Device init */
-	encoder_initEncoder();
-	driver_initDriver();
-	controller_initPID(&pidData);
+    /* Device init */
+    encoder_initEncoder();
+    driver_initDriver();
+    controller_initPID(&pidData);
 
-	/* Cyclic executive init */
-	tc_installLptmr0(CYCLIC_EXECUTIVE_PERIOD, main_cyclicExecuteIsr);
+    /* Cyclic executive init */
+    tc_installLptmr0(CYCLIC_EXECUTIVE_PERIOD, main_cyclicExecuteIsr);
 }
 
 int main(void)
 {
-	/* Initialization routines */
+    /* Initialization routines */
     boardInit();
     peripheralInit();
 
     /* Presets */
-	controller_setKp(&pidData, dKp);
-	controller_setKi(&pidData, dKi);
-	controller_setKd(&pidData, dKd);
-	controller_setMaxSumError(&pidData, dMaxSumError);
+    controller_setKp(&pidData, dKp);
+    controller_setKi(&pidData, dKi);
+    controller_setKd(&pidData, dKd);
+    controller_setMaxSumError(&pidData, dMaxSumError);
 
 
     for (;;) {
-    	/* Blink status LED */
-    	PTB_BASE_PTR->PTOR = 1 << 18;
-    	/* Set PTB8 for timing analysis */
-    	PTB_BASE_PTR->PTOR = 1 << 8;;
+        /* Blink status LED */
+        PTB_BASE_PTR->PTOR = 1 << 18;
+        /* Set PTB8 for timing analysis */
+        PTB_BASE_PTR->PTOR = 1 << 8;;
 
-    	/* Measure motor speed and position */
-    	encoder_takeMeasurement();
+        /* Measure motor speed and position */
+        encoder_takeMeasurement();
 
-    	dSensorVelocity = encoder_getAngularVelocityRad();
-    	dSensorPosition = encoder_getAngularPositionDegree();
+        dSensorVelocity = encoder_getAngularVelocityRad();
+        dSensorPosition = encoder_getAngularPositionDegree();
 
-    	/* Execute PID calculations */
-    	dActuatorValue = 100*controller_PIDUpdate(&pidData, dSensorVelocity, dReferenceVelocity)/MAX_MOTOR_VELOCITY_RAD;
+        /* Execute PID calculations */
+        dActuatorValue = 100*controller_PIDUpdate(&pidData, dSensorVelocity, dReferenceVelocity)/MAX_MOTOR_VELOCITY_RAD;
 
-    	/* Drive motor */
-    	driver_setDriver(dActuatorValue);
+        /* Drive motor */
+        driver_setDriver(dActuatorValue);
 
-    	/* Process serial communication */
-    	hmi_receive();
-    	hmi_transmit(dSensorVelocity, dSensorPosition, dActuatorValue);
+        /* Process serial communication */
+        hmi_receive();
+        hmi_transmit(dSensorVelocity, dSensorPosition, dActuatorValue);
 
-    	/* Clear PTB8 for timing analysis */
-    	PTB_BASE_PTR->PTOR = 1 << 8;
+        /* Clear PTB8 for timing analysis */
+        PTB_BASE_PTR->PTOR = 1 << 8;
 
-    	while(!uiFlagNextPeriod);
-    	/* Unset the cyclic executive flag */
-    	uiFlagNextPeriod = 0;
+        while(!uiFlagNextPeriod);
+        /* Unset the cyclic executive flag */
+        uiFlagNextPeriod = 0;
 
     }
 
